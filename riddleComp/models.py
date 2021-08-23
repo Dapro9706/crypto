@@ -3,7 +3,7 @@ import random,string
 
 def generate():
     while True:
-        ret=random.choice(string.digits+string.ascii_letters, k=10)
+        ret=random.choices(string.digits+string.ascii_letters, k=10)
         if Post.objects.filer(name=ret).count()==0:
             return ret
 
