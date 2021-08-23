@@ -3,7 +3,7 @@ import random,string
 
 def generate():
     while True:
-        ret=random.choices(string.digits+string.ascii_letters, k=10)
+        ret=''.join(random.choices(string.digits+string.ascii_letters, k=10))
         if Post.objects.filter(name=ret).count()==0:
             return ret
 
