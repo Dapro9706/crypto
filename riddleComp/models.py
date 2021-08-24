@@ -11,7 +11,7 @@ def generate():
 # Create your models here.
 class Post (models.Model):
     name = models.CharField (primary_key=True, max_length=10, default=generate)
-    content = models.TextField (default="""<h3>{Question}</h3>\n
-                                           <h4>[ {Len key} letter Key ]</h4>\n
-                                           <hr>\n
-                                           <h4>Next URL end: <h3>{next end}</h3></h4>""")
+    content = models.TextField (default="<h3>{Question}</h3>\n"\
+                                        "<h4>[ {Len key} letter Key ]</h4>\n"\
+                                        "<hr>\n"\
+                                        "<h4>Next URL end: <h3>{next end}</h3></h4>")
