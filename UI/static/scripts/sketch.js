@@ -25,5 +25,6 @@ $('#Decode').click((event)=>{
 })
 
 $('#Copy').on("click", function(){
-    navigator.clipboard.writeText($("#output").val()).then(()=>{},(err)=>{console.log(err)});
+    document.getElementById('output').select();
+    document.execCommand('copy');
 })
